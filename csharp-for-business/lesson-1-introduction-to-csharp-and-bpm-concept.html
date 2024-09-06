@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="description" content="C# for Business - Lesson 1: Introduction to C# and BPM Concepts">
+    <meta name="keywords" content="C# programming, business process management, BPM concepts, programming for beginners">
+    <meta charset="utf-8" />
+    <title>C# for Business - Lesson 1: Introduction to C# and BPM Concepts</title>
+</head>
+<body>    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #007acc;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007acc;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        pre {
+            background-color: #f0f0f0;
+            border-left: 5px solid #007acc;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007acc;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <header>
+        <h1>C# for Business - Lesson 1: Introduction to C# and BPM Concepts</h1>
+    </header>
+    <main>
+        <center>
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/7kmtGjWss68?si=ffcBaP2sd_rs5XuL"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </center>
+        <section class="intro">
+            <p>Welcome to the first lesson of our C# video course designed specifically for business professionals! In this lesson, we'll introduce the basics of C# programming and explore how it can be used in conjunction with Business Process Management (BPM) principles to create powerful business applications.</p>
+        </section>
+
+        <section>
+            <h2>Description:</h2>
+            <p>Are you a business professional looking to enhance your skills and understand how technology can streamline your processes? In this course, we'll teach you C# programming while integrating key Business Process Management (BPM) concepts. Learn how to create applications that reflect real-world business scenarios and improve efficiency. Suitable for beginners, this course combines hands-on coding exercises with practical BPM principles to help you become a more versatile and valuable asset in your organization.</p>
+        </section>
+
+        <section>
+            <h2>Keywords:</h2>
+            <p>C# programming, business process management, BPM concepts, case management, work items, tasks, business applications, process improvement, efficiency, programming for beginners, C# for business professionals</p>
+        </section>
+
+        <section>
+            <h2>What is C#?</h2>
+            <p>C# is a versatile, object-oriented programming language developed by Microsoft. It is widely used for building a variety of applications, including:</p>
+            <ul>
+                <li><strong>Desktop applications</strong>: Create robust applications for Windows.</li>
+                <li><strong>Web applications and services</strong>: Develop dynamic websites and APIs.</li>
+                <li><strong>Mobile apps</strong>: Build cross-platform mobile applications using frameworks like Xamarin.</li>
+                <li><strong>Games</strong>: Utilize game development engines like Unity.</li>
+                <li><strong>Enterprise software</strong>: Implement large-scale business solutions.</li>
+            </ul>
+            <p>C# is known for its simplicity, robustness, and extensive libraries, making it a popular choice for developers across various industries.</p>
+        </section>
+
+        <section>
+            <h2>Concepts</h2>
+            <p>Business Process Management (BPM) is a discipline that focuses on improving business processes by analyzing, modeling, executing, and optimizing them. In this course, we'll be introducing some key BPM concepts and how they relate to software development:</p>
+            <ol>
+                <li><strong>Cases:</strong> A case represents a specific instance of a business process. For example, in a customer service application, each customer inquiry would be considered a case.</li>
+                <li><strong>Work Items:</strong> Work items are tasks that need to be completed within a case. They represent the individual steps in a business process.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>BPM with C#</h2>
+            <p>Throughout this course, we'll be exploring how to incorporate BPM principles into C# programming. By understanding these concepts, you'll be able to design and develop applications that better reflect real-world business processes, streamlining your operations and improving efficiency.</p>
+        </section>
+
+        <section>
+            <h2>Hands-on Example</h2>
+            <p>Let’s start with a practical example to illustrate how we can use C# to represent a basic BPM scenario. Imagine we have a customer service application where customers can submit inquiries. Each inquiry is a case, and it consists of several work items (e.g., gathering customer information, researching the issue, providing a solution).</p>
+            <pre><code id="code-example" class="language-cs">public class Inquiry
+{
+    public int InquiryId { get; set; }
+    public string CustomerName { get; set; }
+    public string InquiryDescription { get; set; }
+    public Case Case { get; set; }
+}
+
+public class Case
+{
+    public int CaseId { get; set; }
+    public Inquiry Inquiry { get; set; }
+    public List&lt;WorkItem&gt; WorkItems { get; set; } = new List&lt;WorkItem&gt;();
+
+    public void AddWorkItem(WorkItem workItem)
+    {
+       WorkItems.Add(workItem);
+    }
+}
+
+public class WorkItem
+{
+    public int WorkItemId { get; set; }
+    public string Description { get; set; }
+    public Case Case { get; set; }
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Conclusion:</h2>
+            <p>In this first lesson, we've introduced C# as a powerful programming language and discussed how we'll be incorporating BPM concepts throughout the course. We also explored a practical example of how to represent inquiries, cases, and work items in C# using classes and their relationships.</p>
+            <p>In the next lesson, we’ll dive deeper into core programming concepts in C#, such as variables, data types, and control structures. We’ll also introduce some basic coding exercises to reinforce your learning. Stay tuned!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Learn And Cert. All rights reserved.</p>
+    </footer>
+</body>
+</html>
